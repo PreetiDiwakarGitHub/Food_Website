@@ -1,0 +1,58 @@
+.MakeFood {
+  text-align: center;
+  padding: 20px;
+  background-color: #f9f9f9; /* Light background for contrast */
+}
+
+.MakeFood h1 {
+  font-size: 2.5rem; /* Larger font size for the heading */
+  color: #333; /* Dark text color */
+  margin-bottom: 20px;
+  font-family: 'Arial', sans-serif; /* Clean font family */
+  text-transform: uppercase; /* Make the heading uppercase */
+  letter-spacing: 1px; /* Slight spacing between letters */
+}
+
+.Main-container {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure all videos stay in one row */
+  justify-content: center; /* Center align videos */
+  gap: 20px; /* Space between the videos */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+  padding: 20px;
+}
+
+.Main-container::-webkit-scrollbar {
+  height: 8px; /* Adjust scrollbar height */
+}
+
+.Main-container::-webkit-scrollbar-thumb {
+  background: #007bff; /* Blue color for scrollbar thumb */
+  border-radius: 10px; /* Rounded scrollbar thumb */
+}
+
+.Main-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Light background for scrollbar track */
+}
+
+.iframe-container {
+  width: 100%; /* Full width on smaller screens */
+  max-width: 700px; /* Maximum width for larger videos */
+  overflow: hidden; /* Ensure no overflow */
+  background-color: #fff; /* White background for video frame */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover animation */
+}
+
+.iframe-container:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Enhance shadow on hover */
+}
+
+iframe {
+  width: 100%; /* Make the iframe responsive */
+  height: 400px; /* Increased height for larger videos */
+  border: none; /* Remove iframe border */
+  border-radius: 8px; /* Match parent border radius */
+}

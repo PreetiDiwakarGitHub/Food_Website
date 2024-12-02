@@ -1,0 +1,141 @@
+/* General container styling */
+.meal-search-container {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 10px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  max-width: 1500px; /* Wider container for a full-width layout */
+  width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #333;
+}
+
+input[type="text"] {
+  width: 70%;
+  padding: 10px;
+  margin: 10px 0;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+input[type="text"]:focus {
+  border-color: #007bff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.error {
+  color: red;
+  font-size: 1rem;
+  margin-top: 10px;
+}
+
+/* Meals list styling */
+.meals-list {
+  display: flex;
+  flex-wrap: wrap; /* Allows wrapping */
+  justify-content: space-between; /* Spreads items evenly */
+  gap: 20px; /* Adds spacing between items */
+  margin-top: 20px;
+}
+
+/* Meal item styling */
+.meal-item {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  width: calc(33.33% - 20px); /* Ensures three items per row */
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.3s;
+  box-sizing: border-box; /* Includes padding and border in width */
+}
+
+.meal-item img {
+  width: 100%; /* Full width for the image */
+  border-radius: 5px;
+  height: 200px; /* Increased height for better visuals */
+  object-fit: cover; /* Ensures images fit properly */
+}
+
+.meal-item h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 10px;
+}
+
+.meal-item p {
+  font-size: 0.9rem;
+  color: #555;
+  margin-top: 10px;
+  text-align: left;
+  height: 80px; /* Limits description height */
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.meal-item:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+/* Order form styling */
+.order-form {
+  margin-top: 10px;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.order-form h4 {
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.order-form button {
+  padding: 8px 16px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.order-form button:hover {
+  background-color: #218838;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .meal-item {
+    width: calc(50% - 20px); /* Two items per row on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .meal-item {
+    width: 100%; /* One item per row on very small screens */
+  }
+}

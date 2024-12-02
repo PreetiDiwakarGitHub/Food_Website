@@ -1,0 +1,117 @@
+/* Styling for the navbar container */
+.navbar {
+  background-color: #2c3e50; /* Dark background for a modern look */
+  padding: 10px 20px; /* Add padding for better spacing */
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between;
+  align-items: center; /* Vertically center the items */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for elevation */
+  position: fixed; /* Fix the navbar at the top */
+  top: 0; /* Align it at the top of the page */
+  width: 100%; /* Ensure it spans the entire width of the page */
+  z-index: 1000; /* Make sure the navbar stays on top of other content */
+}
+
+/* Adding padding to the body to account for the fixed navbar */
+body {
+  padding-top: 70px; /* Adjust this value based on the height of your navbar */
+  margin: 0; /* Reset default margin */
+}
+
+/* Styling for the logo container */
+.logo {
+  display: flex;
+  align-items: center; /* Center-align logo and text vertically */
+  gap: 10px; /* Space between logo and text */
+  justify-content: flex-start; /* Align items to the left */
+}
+
+/* Styling for the logo image */
+.logo-img {
+  width: 60px; /* Set the logo width */
+  height: 60px; /* Fixed height for consistency */
+  object-fit: cover; /* Ensure the logo maintains its aspect ratio */
+  border-radius: 50%; /* Circular logo */
+}
+
+/* Styling for the "Taste the Magic" text */
+.logo p {
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  font-size: 22px; /* Font size for readability */
+  color: white; /* White text color */
+  margin: 0; /* Remove default margin */
+  font-weight: bold; /* Bold text for emphasis */
+  margin-left: -8px; /* Shift text slightly to the left */
+}
+
+/* Styling for the navigation links list */
+.nav-links {
+  list-style: none; /* Remove bullet points */
+  display: flex; /* Display links in a row */
+  gap: 30px; /* Space between links */
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+/* Styling for individual list items */
+.nav-links li {
+  font-size: 18px; /* Font size for better readability */
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+}
+
+/* Styling for the links */
+.nav-links a {
+  text-decoration: none; /* Remove underline from links */
+  color: white; /* White text color */
+  font-weight: 500; /* Slightly bold text */
+  transition: color 0.3s ease-in-out; /* Smooth transition on hover */
+}
+
+/* Hover effect for links */
+.nav-links a:hover {
+  color: #1abc9c; /* Change color to a refreshing teal on hover */
+}
+
+/* Styling for the login link */
+.nav-links li:last-child a {
+  background-color: #1abc9c; /* Teal background color */
+  color: white; /* White text color */
+  font-weight: bold; /* Bold text */
+  padding: 8px 15px; /* Add padding for better spacing */
+  border-radius: 5px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: background-color 0.3s ease; /* Smooth transition on hover */
+  white-space: nowrap; /* Prevent text from wrapping */
+}
+
+/* Hover effect for the login button */
+.nav-links li:last-child a:hover {
+  background-color: #16a085; /* Darker teal on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the items */
+  }
+
+  .logo {
+    margin-bottom: 10px; /* Add space between the logo and nav-links */
+  }
+
+  .nav-links {
+    flex-direction: column; /* Stack links vertically */
+    gap: 20px; /* Increase gap between links */
+  }
+
+  .nav-links li:last-child a {
+    font-size: 16px; /* Adjust font size for smaller screens */
+    padding: 10px 20px; /* Adjust padding for smaller screens */
+  }
+
+  .logo-img {
+    width: 50px; /* Adjust logo size for smaller screens */
+    height: 50px; /* Adjust height */
+  }
+}
