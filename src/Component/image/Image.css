@@ -1,120 +1,134 @@
 /* Main container styling */
 .Main {
-  position: relative;
-  width: 100%;
-  min-height: 100vh; /* Full viewport height for adaptability */
-  overflow: hidden;
+  position: relative; /* Creates a stacking context for child elements */
+  width: 100%; /* Full width container */
+  height: 55rem; /* Fixed height for the container */
+  overflow: hidden; /* Prevents any content overflow */
 }
 
 /* Background image styling */
 .background img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  z-index: 1;
-  position: relative;
+  width: 100%; /* Image stretches to fit the container width */
+  height: 100%; /* Image height matches the container */
+  object-fit: cover; /* Ensures the image covers the container without distortion */
+  z-index: 1; /* Base layer */
+  position: relative; /* Ensure proper stacking context */
 }
 
 /* Text content styling */
 .Text {
   position: absolute;
-  top: 50%;
-  left: 3%;
-  transform: translate(0, -50%);
-  z-index: 2;
-  color: white;
-  font-family: 'Roboto', sans-serif;
-  text-align: left;
-  border-radius: 15px;
+  top: 40%; /* Centers text vertically */
+  left: 3%; /* Moves the text block to the left side */
+  transform: translate(0, -40%); /* Centers the text vertically without shifting horizontally */
+  z-index: 2; /* Ensures the text stays above the background */
+  color: white; /* Text color for readability */
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  /* Adds padding inside the text block */
+  border-radius: 15px; /* Slightly rounded corners */
+  text-align: left; /* Aligns text content to the left within the block */
 }
 
 /* Header styling */
 .Text h4 {
-  font-size: clamp(1.5rem, 2vw, 2.5rem);
-  font-weight: 600;
+  font-size: 2.5rem; /* Larger font size for the header */
+  font-weight: 600; /* Slightly lighter than bold for a modern feel */
   text-transform: uppercase;
-  letter-spacing: 3px;
-  color: #ffcc00;
-  margin-bottom: 0.2rem;
+  letter-spacing: 3px; /* Increased spacing for a cleaner look */
+  color: #ffcc00; /* Bright yellow for a striking header */
+  margin-bottom: 0.2rem; /* Reduced spacing between the two lines */
 }
-
+z
 /* Main text styling */
 .Text h2 {
-  font-size: clamp(2rem, 3vw, 3.5rem);
-  font-weight: 700;
-  margin-bottom: 1.5rem;
-  line-height: 1.2;
-  color: #ffffff;
+  font-size: 3.5rem; /* Larger font size for the main title */
+  font-weight: 700; /* Bold weight for emphasis */
+  margin-bottom: 1.5rem; /* Adds spacing between title and paragraph */
+  line-height: 1.2; /* Tight line height for a cohesive look */
+  color: #ffffff; /* White text color for contrast */
 }
 
 /* Paragraph styling */
 .Text p {
-  font-size: clamp(1rem, 1.5vw, 1.5rem);
-  line-height: 1.8;
-  max-width: 60ch; /* Limit to 60 characters wide */
-  color: #eaeaea;
-  margin-top: 1.5rem;
-  text-align: justify;
+  font-size: 1.5rem; /* Adjusts the text size */
+  line-height: 1.8; /* Improves line spacing */
+  max-width: 60rem; /* Limits the width of the paragraph */
+  color: #eaeaea; /* Sets a soft, subtle text color */
+  margin-top: 1.5rem; /* Adds spacing above the paragraph */
+  text-align: justify; /* Neatly aligns the text content */
 }
 
-/* Responsive Design for tablets and smaller screens */
+/* Responsive Design for smaller screens */
 @media (max-width: 1024px) {
+  .Main {
+      height: 50rem; /* Adjust container height for medium screens */
+  }
+
   .Text {
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 80%;
+      left: 50%; /* Center-align text block */
+      transform: translate(-50%, -40%); /* Adjust positioning for centering */
+      width: 80%; /* Adjust width for medium screens */
+      padding: 1.5rem 2rem; /* Reduced padding */
   }
 
   .Text h4 {
-    font-size: clamp(1.5rem, 2vw, 2rem);
+      font-size: 2rem; /* Smaller font size for the header */
   }
 
-  .Text h2 {
-    font-size: clamp(2rem, 3vw, 3rem);
+  .Text h1 {
+      font-size: 3rem; /* Smaller font size for the main title */
   }
 
   .Text p {
-    font-size: clamp(1rem, 1.2vw, 1.4rem);
-    max-width: 100%;
+      font-size: 1.4rem; /* Smaller font size for the paragraph */
+      max-width: 100%; /* Allow the paragraph to take full width */
   }
 }
 
-/* Responsive Design for mobile screens */
+/* Responsive Design for smaller screens (max-width: 768px) */
 @media (max-width: 768px) {
+  .Main {
+      height: 40rem; /* Adjust container height for smaller screens */
+  }
+
   .Text {
-    width: 90%;
-    padding: 1rem;
+      left: 50%; /* Center-align text block */
+      transform: translate(-50%, -40%); /* Adjust positioning for centering */
+      width: 85%; /* Adjust width for smaller screens */
   }
 
   .Text h4 {
-    font-size: 1.8rem;
+      font-size: 1.8rem; /* Adjust font size for the header */
   }
 
-  .Text h2 {
-    font-size: 2.5rem;
+  .Text h1 {
+      font-size: 2.5rem; /* Adjust font size for the main title */
   }
 
   .Text p {
-    font-size: 1.2rem;
+      font-size: 1.3rem; /* Adjust font size for the paragraph */
+      max-width: 100%; /* Allow the paragraph to take full width */
   }
 }
 
-/* Responsive Design for very small screens */
+/* Responsive Design for very small screens (max-width: 480px) */
 @media (max-width: 480px) {
   .Text {
-    width: 95%;
-    padding: 0.5rem;
+      left: 50%; /* Center-align text block */
+      transform: translate(-50%, -40%); /* Adjust positioning for centering */
+      width: 90%; /* Adjust width for very small screens */
+      padding: 1rem; /* Further reduced padding for very small screens */
   }
 
   .Text h4 {
-    font-size: 1.6rem;
+      font-size: 1.6rem; /* Smaller font size for the header */
   }
 
-  .Text h2 {
-    font-size: 2rem;
+  .Text h1 {
+      font-size: 2rem; /* Smaller font size for the main title */
   }
 
   .Text p {
-    font-size: 1rem;
+      font-size: 1.2rem; /* Smaller font size for the paragraph */
   }
 }
