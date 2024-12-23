@@ -36,7 +36,6 @@ p {
   border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   text-align: left;
-  width: 100%;
 }
 
 .contact-form label {
@@ -50,11 +49,11 @@ p {
 .contact-form input,
 .contact-form textarea {
   width: 100%;
-  padding: 8px; /* Reduced padding for smaller input boxes */
+  padding: 12px;
   margin-bottom: 20px;
   border: 1px solid #ddd;
   border-radius: 5px;
-  font-size: 14px; /* Reduced font size */
+  font-size: 14px;
   transition: border-color 0.3s ease;
 }
 
@@ -130,9 +129,17 @@ p {
 
 @media (max-width: 480px) {
   .contact-form input,
-  .contact-form textarea,
+  .contact-form textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
   .contact-form button {
     padding: 10px;
+    font-size: 14px;
+  }
+
+  .contact-info p {
     font-size: 14px;
   }
 }

@@ -89,7 +89,7 @@ body {
   background-color: #16a085; /* Darker teal on hover */
 }
 
-/* Responsive design for smaller screens */
+/* Responsive design for medium screens */
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column; /* Stack items vertically */
@@ -113,5 +113,29 @@ body {
   .logo-img {
     width: 50px; /* Adjust logo size for smaller screens */
     height: 50px; /* Adjust height */
+  }
+}
+
+/* Responsive design for small screens */
+@media (max-width: 480px) {
+  .nav-links {
+    gap: 15px; /* Further reduce gap for compact layout */
+  }
+
+  .nav-links li {
+    font-size: 16px; /* Smaller font size for links */
+  }
+
+  .nav-links li:last-child a {
+    padding: 8px 15px; /* Adjust padding for smaller buttons */
+  }
+
+  .logo-img {
+    width: 40px; /* Smaller logo size for very small screens */
+    height: 40px;
+  }
+
+  .logo p {
+    font-size: 18px; /* Smaller font for "Taste the Magic" */
   }
 }
